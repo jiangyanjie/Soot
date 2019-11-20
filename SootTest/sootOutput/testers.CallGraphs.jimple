@@ -1,0 +1,69 @@
+public class testers.CallGraphs extends java.lang.Object
+{
+
+    static void <clinit>()
+    {
+        staticinvoke <testers.CallGraphs: void m1()>();
+        return;
+    }
+
+    public void <init>()
+    {
+        testers.CallGraphs r0;
+
+        r0 := @this: testers.CallGraphs;
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    static void m1()
+    {
+        return;
+    }
+
+    static void m2()
+    {
+        return;
+    }
+
+    public static void C()
+    {
+        staticinvoke <testers.CallGraphs: void m2()>();
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+
+        r0 := @parameter0: java.lang.String[];
+        staticinvoke <testers.CallGraphs: void p()>();
+        return;
+    }
+
+    static java.util.Map m(java.util.Map)
+    {
+        java.util.Map r0;
+
+        r0 := @parameter0: java.util.Map;
+        return r0;
+    }
+
+    static void p()
+    {
+        java.util.TreeMap $r0;
+        java.util.HashMap $r2;
+        java.util.Map r3;
+        java.util.Set $r4;
+
+        $r0 = new java.util.TreeMap;
+        specialinvoke $r0.<java.util.TreeMap: void <init>()>();
+        staticinvoke <testers.CallGraphs: java.util.Map m(java.util.Map)>($r0);
+        $r2 = new java.util.HashMap;
+        specialinvoke $r2.<java.util.HashMap: void <init>()>();
+        r3 = staticinvoke <testers.CallGraphs: java.util.Map m(java.util.Map)>($r2);
+        $r4 = interfaceinvoke r3.<java.util.Map: java.util.Set entrySet()>();
+        interfaceinvoke $r4.<java.util.Set: java.util.Iterator iterator()>();
+        return;
+    }
+}

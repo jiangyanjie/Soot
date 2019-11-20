@@ -1,0 +1,11 @@
+digraph "call-graph" {
+    "<soot: void p()>"
+    "<java.util.HashMap: void <clinit>()>"
+    "<soot: void p()>"->"<java.util.HashMap: void <clinit>()>";
+    "<java.lang.Object: void <clinit>()>"
+    "<soot: void p()>"->"<java.lang.Object: void <clinit>()>";
+    "<java.util.HashMap: void <init>()>"
+    "<soot: void p()>"->"<java.util.HashMap: void <init>()>";
+    "<java.util.HashMap: java.util.Set entrySet()>"
+    "<soot: void p()>"->"<java.util.HashMap: java.util.Set entrySet()>";
+}
